@@ -40,7 +40,7 @@ function Header() {
                 </li>
               );
             })}
-            <li className="navbar-toggle px-4"><ButtonDark /></li>
+            <li className="navbar-toggle px-4"><ButtonDark name="Logout" type="Button"/></li>
           </ul>
         </nav>
       </IconContext.Provider>
