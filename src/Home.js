@@ -3,10 +3,12 @@ import Heading from "./components/Heading";
 import CCarousel from "./components/Carousel";
 import logo from "./assets/logo.jpg";
 import FProduct from "./components/FProduct";
+import { Outlet, Link } from "react-router-dom";
 
-function App() {
+function Home() {
+
   return (
-    <div className="App">
+    <div className="Home">
       <Heading />
       <div>
       <CCarousel />
@@ -21,8 +23,10 @@ function App() {
       <FProduct />
       </div>
       <Footer />
+      <Outlet />
     </div>
   );
 }
 
-export default App;
+
+export default Home;

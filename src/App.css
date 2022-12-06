@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Navbar CSS */
+.navbar {
+  background-color: #fff;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menu-bars {
+  margin-left: 1rem;
+  font-size: 2rem;
+  background: none;
+  color: #fff;
+}
+
+.menu-bars-closed {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+    color: #FB928E;
+  }
+
+.nav-menu {
+  background: rgb(251,146,142);
+background: linear-gradient(180deg, rgba(251,146,142,1) 72%, rgba(255,255,255,1) 100%);
+  width: 320px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+  z-index: 289;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 450ms;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: #fff;
+  color: #FB928E;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  background-color: #FB928E;
+  color: #fff;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+span {
+  margin-left: 16px;
+}
+
+/* Button CSS */
+
+.dashButton {
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #FB928E;
+  border: 0px;
+  background:#fff;
+}
+
+.dashButton:hover {
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #fff;
+  border: 1px solid #fff;
+  background:#FB928E;
+}
