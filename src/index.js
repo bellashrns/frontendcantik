@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Dashboard from "./Dashboard";
 import Catalog from "./Catalog";
+import CustomOrder from "./CustomOrder";
+import AboutUs from "./AboutUs";
 
 export default function App() {
   return (
@@ -13,6 +15,10 @@ export default function App() {
         <Route path="/dashboard" element={<Dashboard />}>
         </Route>
         <Route path="/catalog" element={<Catalog />}>
+        </Route>
+        <Route path="/custom" element={<CustomOrder/>}>
+        </Route>
+        <Route path="/about" element={<AboutUs/>}>
         </Route>
       </Routes>
     </BrowserRouter>
