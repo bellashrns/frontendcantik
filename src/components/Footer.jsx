@@ -15,9 +15,9 @@ function Footer() {
         <div className="col-3 p-4">
             <h5>Contact Us</h5>
             <i class="fa-lg fa-brands fa-instagram"></i>
-            <i class="fa-lg fa-brands fa-whatsapp"></i>
-            <img src={tokped} style={{width: 20, marginTop: -6, marginLeft: -1}} />
-            <img src={shopee} style={{width: 23, marginTop: -5, marginLeft: -2}} />
+            <i style={{marginLeft: 8}} class="fa-lg fa-brands fa-whatsapp"></i>
+            <img src={tokped} style={{width: 20, marginTop: -6, marginLeft: 7}} />
+            <img src={shopee} style={{width: 23, marginTop: -5, marginLeft: 5}} />
         </div>
     </div>;
 }
