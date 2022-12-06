@@ -5,20 +5,26 @@ import * as IoIcons from "react-icons/io";
 
 export const SidebarData = [
   {
-    title: "Manage Catalogue",
+    title: "Dashboard",
     path: "/dashboard",
+    icon: <IoIcons.IoIosPaper />,
+    cName: "nav-text",
+  },
+  {
+    title: "Manage Catalogue",
+    path: "/dashboard/catalog",
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
   },
   {
     title: "Manage Category",
-    path: "/dashboard",
+    path: "/dashboard/category",
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
   },
   {
     title: "Manage Transaction",
-    path: "/dashboard",
+    path: "/dashboard/transaction",
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
   },

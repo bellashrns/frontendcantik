@@ -1,7 +1,4 @@
 import React from "react";
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
-import * as IoIcons from "react-icons/io";
 import Image from "../../assets/flower.jpg";
 
 export const Catalogue = [
@@ -25,6 +22,33 @@ export const Catalogue = [
   },
   {
     itemName: "Flower C",
+    desc: "Blablabla",
+    price: "300000",
+    status: "active",
+    path: "/flowerc",
+    icon: <Image />,
+    cName: "nav-text",
+  },
+  {
+    itemName: "Flower D",
+    desc: "Blablabla",
+    price: "300000",
+    status: "active",
+    path: "/flowerc",
+    icon: <Image />,
+    cName: "nav-text",
+  },
+  {
+    itemName: "Flower E",
+    desc: "Blablabla",
+    price: "300000",
+    status: "active",
+    path: "/flowerc",
+    icon: <Image />,
+    cName: "nav-text",
+  },
+  {
+    itemName: "Flower F",
     desc: "Blablabla",
     price: "300000",
     status: "active",

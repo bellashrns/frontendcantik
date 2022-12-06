@@ -80,7 +80,7 @@ background: linear-gradient(180deg, rgba(251,146,142,1) 72%, rgba(255,255,255,1)
 }
 
 .navbar-toggle {
-  background-color: #FB928E;
+  background-color: transparent;
   color: #fff;
   width: 100%;
   height: 80px;
@@ -109,4 +109,42 @@ span {
   color: #fff;
   border: 1px solid #fff;
   background:#FB928E;
+}
+
+.dashButton {
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #FB928E;
+  border: 0px;
+  background:#fff;
+}
+
+.dashButton:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background:#FB928E;
+}
+
+.dashButtonLight {
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #fff;
+  border: 0px;
+  background: #FB928E;
+}
+
+.dashButtonLight:hover {
+  box-shadow: 0 0 0 2px rgb(0 0 0 / 20%);
+}
+
+/* Transaction Tag */
+
+.transactionStatus {
+  text-align: center;
+  font-size: 12px;
+  width: 20%;
+  padding: 5px 5px;
+  border-radius: 10px;
+  color: #FB928E;
+  border: 1px solid #FB928E;
 }
