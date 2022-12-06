@@ -10,6 +10,8 @@ import CreateCatalog from "./CreateCatalog";
 import CreateCategory from "./CreateCategory";
 import DetailPageCatalog from "./DetailPageCatalog";
 import DetailPageTransaction from "./DetailPageTransaction";
+import CustomOrder from "./CustomOrder";
+import AboutUs from "./AboutUs";
 
 export default function App() {
   return (
@@ -34,6 +36,10 @@ export default function App() {
         <Route path="/dashboard/transaction/details" element={<DetailPageTransaction />}>
         </Route>
         <Route path="/catalog" element={<Catalog />}>
+        </Route>
+        <Route path="/custom" element={<CustomOrder/>}>
+        </Route>
+        <Route path="/about" element={<AboutUs/>}>
         </Route>
       </Routes>
     </BrowserRouter>
