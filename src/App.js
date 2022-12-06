@@ -14,9 +14,9 @@ function App() {
         <img style={{width: 200}} src={logo} />
         <h5>Arranged With Love</h5>
         <p className="mx-auto w-50">
-          Established in 2017, Fedora Florist is known for our beautiful flower arrangement in fresh, preserved dried and artificial flowers. 
-          We also provide unique design for any kind of floral products and events.
-          As starting in 2018, we started new fields in bridal bouquet, flower installation and decoration for all events especially wedding.</p>
+          Established in 2017, Feodora Florist is known for our beautiful flower arrangement in fresh, preserved dried and artificial flowers. 
+          We also provide unique design for any kind of floral products and events. As starting in 2018, we started new fields in bridal bouquet, 
+          flower installation and decoration for all events especially wedding.</p>
       </div>
       <FProduct />
       </div>

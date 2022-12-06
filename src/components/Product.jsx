@@ -2,10 +2,10 @@ import React from "react";
 
 function Product(props) {
     return (
-        <div className="col-md-auto">
+        <div className="col-auto">
             <img src={props.src} />
             <h5>{props.name}</h5>
-            <p>{props.price}</p>
+            <p>Rp {props.price}</p>
         </div>
     );
 }
