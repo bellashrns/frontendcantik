@@ -147,6 +147,8 @@ span {
   border-radius: 10px;
   color: #FB928E;
   border: 1px solid #FB928E;
+}
+
 /* buat whatsapp di custom */
 .whatsapp_float {
   position: fixed;
