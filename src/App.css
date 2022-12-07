@@ -176,4 +176,24 @@ span {
   color: #050505; 
   font-size: 15px; 
   transition: 0.3s;
-} 
+}
+
+.btnCat {
+  border-radius: 50px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btnCat:hover {
+  background-color: #FB928E;
+}
+
+.btnSee {
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+.btnSee:hover {
+  background-color: #FB928E;
+  border-color: transparent;
+}
