@@ -23,6 +23,13 @@ function Home() {
       </div>
       <FProduct />
       </div>
+      <div className="text-center pb-4">
+        <button
+          className="btnSee p-2"
+        >
+          SEE ALL
+        </button>
+      </div>
       <Footer />
       <Outlet />
     </div>
