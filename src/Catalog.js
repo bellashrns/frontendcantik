@@ -1,63 +1,25 @@
+import React, { useState } from "react";
 import Heading from "./components/Heading";
 import Footer from "./components/Footer";
 import Product from "./components/Product";
-import products from "./components/Assets";
+import { products, categories } from "./components/Assets";
+import Collapse from "react-bootstrap/Collapse";
+import "./App.css";
 
 function Catalog() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div>
       <Heading />
       <div className="pt-3 col-6 mx-auto text-center">
-        <button
-          style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-        >
-          <h5>Fresh Flower</h5>
-        </button>
-        <button
-          style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-        >
-          <h5>Preserved & Dried Flowers</h5>
-        </button>
-        <button
-          style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-        >
-          <h5>Artificial Flowers</h5>
-        </button>
-        <button
-          style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-        >
-          <h5>Bloombox</h5>
-        </button>
-        <button
-          style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-        >
-          <h5>Flower Basket</h5>
-        </button>
-        <button
-          style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-        >
-          <h5>Vase Arrangement</h5>
-        </button>
-        <button
-          style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-        >
-          <h5>Money Bouquet</h5>
-        </button>
-        <button
-          style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-        >
-          <h5>Flower Board</h5>
-        </button>
-        <button
-          style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-        >
-          <h5>Standing Flower</h5>
-        </button>
-        <button
-          style={{ backgroundColor: "transparent", borderColor: "transparent" }}
-        >
-          <h5>Frame</h5>
-        </button>
+        {categories.map((e) => (
+            <button
+              className="btnCat p-1 pt-2 mx-2"
+            >
+              <h5>{e}</h5>
+            </button>
+        ))}
       </div>
       <div className="row justify-content-center pt-3">
         {products.map((e) => (
@@ -67,8 +29,31 @@ function Catalog() {
           <Product src={e.src} name={e.name} price={e.price} />
         ))}
         {products.map((e) => (
+          <Product src={e.src} name={e.name} price={e.price} />
+        ))}
+      </div>
+      <Collapse in={open}>
+        <div className="row justify-content-center pt-3">
+          {products.map((e) => (
             <Product src={e.src} name={e.name} price={e.price} />
           ))}
+
+          {/* ini nanti untuk see all button gue limit 10 produk aja yg didisplay
+        {products.map((e) => e.id < 10 && (
+          <Product src={e.src} name={e.name} price={e.price} />
+        ))} */}
+
+        </div>
+      </Collapse>
+      <div className="text-center pb-4">
+        <button
+          onClick={() => setOpen(!open)}
+          aria-controls="example-collapse-text"
+          aria-expanded={open}
+          className="btnSee p-2"
+        >
+          SEE ALL
+        </button>
       </div>
       <Footer />
     </div>

@@ -4,6 +4,7 @@ import CCarousel from "./components/Carousel";
 import logo from "./assets/logo.jpg";
 import FProduct from "./components/FProduct";
 import { Outlet, Link } from "react-router-dom";
+import "./App.css";
 
 function Home() {
 
