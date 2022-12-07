@@ -1,5 +1,6 @@
 import Heading from "./components/Heading";
 import Footer from "./components/Footer";
+import "./App.css";
 
 function AboutUs() {
     return(
