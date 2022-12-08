@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Catalogue } from "../../data/dashboard/Catalogue";
 import ButtonLight from "./ButtonLight";
 import "../../App.css";
 
 function CatalogListBox() {
+
   return (
     <>
       <div className="row">
@@ -21,7 +22,7 @@ function CatalogListBox() {
                   <b>{item.itemName}</b>
                 </h5>
                 <p class="card-text">Rp {item.price}</p>
-                <Link to={item.path}>
+                <Link to={"/dashboard/catalog/details/"+item.id}>
                   <ButtonLight 
                     name="Open"
                     type="Button"

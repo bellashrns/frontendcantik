@@ -22,7 +22,7 @@ function CatalogListBox() {
                 <p class="transactionStatus">{item.status}</p>
                 </div>
                 <div class="mt-4 pt-3 col-md-4 .offset-md-4">
-                <Link to={item.path}>
+                <Link to={"/dashboard/transaction/details/"+item.id}>
                   <ButtonLight 
                     name="Open Details"
                     type="Button"

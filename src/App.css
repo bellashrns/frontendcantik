@@ -27,12 +27,12 @@
     margin-left: 2rem;
     font-size: 2rem;
     background: none;
-    color: #FB928E;
+    color: #B66358;
   }
 
 .nav-menu {
-  background: rgb(251,146,142);
-background: linear-gradient(180deg, rgba(251,146,142,1) 72%, rgba(255,255,255,1) 100%);
+  background: rgb(182,99,88);
+  background: linear-gradient(180deg, rgba(182,99,88,1) 33%, rgba(230,184,173,1) 100%);
   width: 320px;
   height: 100vh;
   display: flex;
@@ -72,7 +72,7 @@ background: linear-gradient(180deg, rgba(251,146,142,1) 72%, rgba(255,255,255,1)
 
 .nav-text a:hover {
   background-color: #fff;
-  color: #FB928E;
+  color: #B66358;
 }
 
 .nav-menu-items {
@@ -98,7 +98,7 @@ span {
 .dashButton {
   padding: 10px 15px;
   border-radius: 10px;
-  color: #FB928E;
+  color: #B66358;
   border: 0px;
   background:#fff;
 }
@@ -108,21 +108,7 @@ span {
   border-radius: 10px;
   color: #fff;
   border: 1px solid #fff;
-  background:#FB928E;
-}
-
-.dashButton {
-  padding: 10px 15px;
-  border-radius: 10px;
-  color: #FB928E;
-  border: 0px;
-  background:#fff;
-}
-
-.dashButton:hover {
-  color: #fff;
-  border: 1px solid #fff;
-  background:#FB928E;
+  background: transparent;
 }
 
 .dashButtonLight {
@@ -130,7 +116,7 @@ span {
   border-radius: 10px;
   color: #fff;
   border: 0px;
-  background: #FB928E;
+  background: #B66358;
 }
 
 .dashButtonLight:hover {
@@ -145,8 +131,8 @@ span {
   width: 20%;
   padding: 5px 5px;
   border-radius: 10px;
-  color: #FB928E;
-  border: 1px solid #FB928E;
+  color: #B66358;
+  border: 1px solid #B66358;
 }
 
 /* buat whatsapp di custom */

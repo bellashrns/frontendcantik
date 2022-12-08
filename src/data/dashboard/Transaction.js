@@ -5,6 +5,16 @@ export const Transaction = [
     date: "22 April 2022",
     total: "600000",
     status: "On Process",
+    items: [
+      {
+        itemId: 2,
+        quantity: 1
+      },
+      {
+        itemId: 4,
+        quantity: 2
+      },
+    ],
   },
   {
     id:2,
@@ -12,6 +22,16 @@ export const Transaction = [
     date: "22 April 2022",
     total: "400000",
     status: "On Shipping",
+    items: [
+      {
+        itemId: 2,
+        quantity: 1
+      },
+      {
+        itemId: 4,
+        quantity: 2
+      },
+    ],
   },
   {
     id:3,
@@ -19,5 +39,15 @@ export const Transaction = [
     date: "22 April 2022",
     total: "400000",
     status: "Arrived",
+    items: [
+      {
+        itemId: 2,
+        quantity: 1
+      },
+      {
+        itemId: 4,
+        quantity: 2
+      },
+    ],
   },
 ];

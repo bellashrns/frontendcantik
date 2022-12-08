@@ -6,10 +6,11 @@ import Dashboard from "./Dashboard";
 import DashboardCatalog from "./DashboardCatalog";
 import DashboardCategory from "./DashboardCategory";
 import DashboardTransaction from "./DashboardTransaction";
+import DashboardWebsite from "./DashboardWebsite";
 import CreateCatalog from "./CreateCatalog";
-import CreateCategory from "./CreateCategory";
 import DetailPageCatalog from "./DetailPageCatalog";
 import DetailPageTransaction from "./DetailPageTransaction";
+import EditCatalog from "./EditCatalog";
 import CustomOrder from "./CustomOrder";
 import AboutUs from "./AboutUs";
 
@@ -27,13 +28,15 @@ export default function App() {
         </Route>
         <Route path="/dashboard/transaction" element={<DashboardTransaction />}>
         </Route>
+        <Route path="/dashboard/website" element={<DashboardWebsite />}>
+        </Route>
         <Route path="/dashboard/add-catalog" element={<CreateCatalog />}>
         </Route>
-        <Route path="/dashboard/add-category" element={<CreateCategory />}>
+        <Route path="/dashboard/catalog/details/:id" element={<DetailPageCatalog />}>
         </Route>
-        <Route path="/dashboard/catalog/details" element={<DetailPageCatalog />}>
+        <Route path="/dashboard/catalog/edit/:id" element={<EditCatalog />}>
         </Route>
-        <Route path="/dashboard/transaction/details" element={<DetailPageTransaction />}>
+        <Route path="/dashboard/transaction/details/:id" element={<DetailPageTransaction />}>
         </Route>
         <Route path="/catalog" element={<Catalog />}>
         </Route>

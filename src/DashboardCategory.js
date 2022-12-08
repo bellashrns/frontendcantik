@@ -11,9 +11,15 @@ function Dashboard() {
         <Sidebar />
       </div>
       <div className="col p-5">
-        <Link to="/dashboard/add-category">
-          <ButtonLight name="Add New Category" type="Button"/>
-        </Link>
+        <h2>Add New Category</h2>
+      <form class="form-inline">
+          <div style={{width:"88%"}} class="input-group">
+              <input type="text" id="form1" class="form-control" placeholder="Input your new category here." />
+            <button type="submit" class="dashButtonLight">
+              Add
+            </button>
+          </div>
+          </form>
         <div className="pt-4">
           <h2>All Categories</h2>
         </div>
