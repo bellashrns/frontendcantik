@@ -7,11 +7,27 @@ import { IconContext } from "react-icons";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import logo from "../assets/logo.jpg";
+import login from "../assets/login.png";
+import PopUpButton from "./popUpButton";
+import LoginPopUp from "./LoginPopUp";
+import shopee from "../assets/shopee.png";
+import tokped from "../assets/tokped.png";
+import close from "../assets/close.png";
 
-function Heading() {
+function Heading(props) {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
+
+  const [isOpen, setIsOpen] = useState(false);
+    const togglePopup = () => {
+        setIsOpen(!isOpen);
+    }
+
+    const [isOpenLoginPopUp, setIsOpenLoginPopUp] = useState(false);
+    const togglePopupLoginPopUp = () => {
+        setIsOpenLoginPopUp(!isOpenLoginPopUp);
+    }
 
   return (
     <IconContext.Provider value={{ color: "undefined" }}>
@@ -56,9 +72,11 @@ function Heading() {
         </div>
         <div className="col-6 d-flex justify-content-center">
           <img src={logo} style={{ width: 200 }} />
-        </div>
+          </div>
         <div className="col-3 d-flex justify-content-end p-5 mt-2">
-          <i class="fa-regular fa-user px-2"></i>
+            {/* <img src={login} style={{width: 14, height: 18, marginRight: 8}}/> */}
+               <PopUpButton pict={login} handleClick={togglePopup}/>
+               {isOpen && <LoginPopUp closeButton={close} pict={login} handleClose={togglePopup} />}
           <i class="fa-solid fa-cart-shopping px-2"></i>
           <i class="fa-solid fa-magnifying-glass px-2"></i>
         </div>

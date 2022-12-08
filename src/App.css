@@ -291,3 +291,55 @@ span {
 span {
   margin-left: 16px;
 }
+
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.popup-container {
+  position: relative;
+  width: 60%;
+  height: 200%;
+  margin-top: 300px;
+  background: rgb(255, 255, 255);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.close-button {
+  width: 30px;
+  margin-top: 10px;
+  margin-left: 720px;
+}
+
+.form {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.login-btn {
+  background-color: lightgray;
+  height: 40px;
+  width: 70px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 1px 2px rgb(194, 193, 193);
+}
+  .login-btn:hover {
+    background-color: rgb(194, 193, 193);
+    box-shadow: 1px 2px rgb(167, 164, 164);
+  }

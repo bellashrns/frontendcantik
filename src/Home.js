@@ -5,8 +5,23 @@ import logo from "./assets/logo.jpg";
 import FProduct from "./components/FProduct";
 import { Outlet, Link } from "react-router-dom";
 import "./App.css";
+import { useEffect, useState } from "react";
+import shopee from "./assets/shopee.png";
+import PopUpButton from "./components/popUpButton";
+import tokped from "./assets/tokped.png";
+import LoginPopUp from "./components/LoginPopUp";
+import login from "./assets/login.png";
 
-function Home() {
+function Home(props) {
+    // const [isOpen, setIsOpen] = useState(false);
+    // const togglePopup = () => {
+    //     setIsOpen(!isOpen);
+    // }
+
+    // const [isOpenLoginPopUp, setIsOpenLoginPopUp] = useState(false);
+    // const togglePopupLoginPopUp = () => {
+    //     setIsOpenLoginPopUp(!isOpenLoginPopUp);
+    // }
 
   return (
     <div className="Home">
@@ -32,6 +47,11 @@ function Home() {
       </div>
       <Footer />
       <Outlet />
+
+      {/* <div className="login">
+               <PopUpButton pict={login} handleClick={togglePopup}/>
+               {isOpen && <LoginPopUp closeButton={tokped} pict={shopee} handleClose={togglePopup} />}
+            </div> */}
     </div>
   );
 }
