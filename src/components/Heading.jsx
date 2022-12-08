@@ -11,21 +11,22 @@ import logo from "../assets/logo.jpg";
 function Heading() {
     const [sidebar, setSidebar] = useState(false);
 
-    const showSidebar = () => setSidebar(true);
+    const showSidebar = () => setSidebar(!sidebar);
 
     return <div className="row border-bottom">
         <div className="col-3 p-5 mt-2">
         <IconContext.Provider value={{ color: "undefined" }}>
       <div className="navbarWeb">
-      <p data-bs-toggle="offcanvas" tabindex="-1" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><Link to="#" className="menuWeb-bars-closed">
+          <Link to="#" className="menuWeb-bars-closed">
             <FaIcons.FaBars onClick={showSidebar} />
-          </Link></p>
+          </Link>
         </div>
-        <div class="offcanvas" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div className="offcanvas-body navWeb-menu active">
-          <ul className="navWeb-menu-items">
+        <nav className={sidebar ? "navWeb-menu active" : "navWeb-menu"}>
+          <ul className="navWeb-menu-items" onClick={showSidebar}>
           <li className="navbarWeb-toggle">
-              
+              <Link to="#" className="menuWeb-bars">
+                <AiIcons.AiOutlineClose />
+              </Link>
             </li>
             <li className="navbarWeb-toggle px-5 mt-3">
               
@@ -41,8 +42,7 @@ function Heading() {
               );
             })}
           </ul>
-        </div>
-        </div>
+        </nav>
       </IconContext.Provider>
         </div>
         <div className="col-6 d-flex justify-content-center">
