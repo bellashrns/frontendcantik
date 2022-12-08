@@ -31,6 +31,7 @@ function Heading() {
 
           <div
             class="offcanvas offcanvas-start navWeb-menu"
+            data-bs-scroll="true"
             tabindex="-1"
             id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel"
