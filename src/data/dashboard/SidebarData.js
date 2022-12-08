@@ -28,4 +28,10 @@ export const SidebarData = [
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
   },
+  {
+    title: "Manage Website",
+    path: "/dashboard/website",
+    icon: <IoIcons.IoIosPaper />,
+    cName: "nav-text",
+  },
 ];

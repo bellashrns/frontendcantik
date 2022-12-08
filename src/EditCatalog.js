@@ -1,15 +1,20 @@
 import Sidebar from "./components/dashboard/Header";
 import ButtonLight from "./components/dashboard/ButtonLight";
+import { Catalogue } from "./data/dashboard/Catalogue";
+import { useParams } from 'react-router';
 import "./App.css";
 
-function CreateCatalog() {
+function EditCatalog() {
+  const { id } = useParams();
+  const data = Catalogue[id-1];
+
   return (
     <div className="row h-100">
       <div className="col-3">
         <Sidebar />
       </div>
       <div className="col pt-3 px-5">
-        <h1>Create Catalog</h1>
+        <h1>Edit Catalog</h1>
         <form class="w-50">
           <div class="form-group">
             <label for="inputItemName">Item Name</label>
@@ -18,6 +23,7 @@ function CreateCatalog() {
               class="form-control"
               id="inputItemName"
               placeholder="Enter item name"
+              value={data.itemName}
               required
             ></input>
           </div>
@@ -29,7 +35,7 @@ function CreateCatalog() {
               class="form-control my-1 mr-sm-2"
               id="inlineFormCustomSelectPref"
             >
-              <option selected>Choose...</option>
+              <option selected>{data.category}</option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
@@ -46,6 +52,7 @@ function CreateCatalog() {
                 class="form-control"
                 id="inputPrice"
                 placeholder="Enter price"
+                value={data.price}
                 required
               ></input>
             </div>
@@ -57,6 +64,7 @@ function CreateCatalog() {
               id="inputDesc"
               placeholder="Enter description"
               rows="3"
+              value={data.desc}
               required
             ></textarea>
           </div>
@@ -72,7 +80,7 @@ function CreateCatalog() {
             <small>You can choose more than one file.</small>
           </div>
           <div className="mt-3">
-            <ButtonLight name="Submit" type="submit" />
+            <ButtonLight name="Edit" type="submit" />
           </div>
         </form>
       </div>
@@ -80,4 +88,4 @@ function CreateCatalog() {
   );
 }
 
-export default CreateCatalog;
+export default EditCatalog;

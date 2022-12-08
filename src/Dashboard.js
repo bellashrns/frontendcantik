@@ -1,10 +1,14 @@
 import Sidebar from "./components/dashboard/Header";
 import Card from "./components/dashboard/Card";
+import CatalogImg from "./assets/catalog.png";
+import CategoryImg from "./assets/category.png";
+import TransactionImg from "./assets/transaction.png";
+import WebsiteImg from "./assets/website.png";
 import "./App.css";
 
 function Dashboard() {
   return (
-    <div className="row h-100">
+    <div className="row h-100 mt-3">
       <div className="col-3">
         <Sidebar />
       </div>
@@ -16,7 +20,7 @@ function Dashboard() {
                 <Card
                 title="Manage Catalogue"
                 text="Set your product details here!"
-                image="https://dummyimage.com/250/ffffff/000000"
+                image={CatalogImg}
                 link="/dashboard/catalog"
                 button="Open"
                 />
@@ -25,7 +29,7 @@ function Dashboard() {
                 <Card
                 title="Manage Category"
                 text="Edit your product category here!"
-                image="https://dummyimage.com/250/ffffff/000000"
+                image={CategoryImg}
                 link="/dashboard/category"
                 button="Open"
                 />
@@ -34,8 +38,17 @@ function Dashboard() {
                 <Card
                 title="Manage Transaction"
                 text="You can check all transactions here!"
-                image="https://dummyimage.com/250/ffffff/000000"
+                image={TransactionImg}
                 link="/dashboard/transaction"
+                button="Open"
+                />
+            </div>
+            <div className="col">
+                <Card
+                title="Manage Website"
+                text="Update your website banner here!"
+                image={WebsiteImg}
+                link="/dashboard/website"
                 button="Open"
                 />
             </div>
