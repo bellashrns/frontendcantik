@@ -1,6 +1,6 @@
 import React from "react";
 import Product from "./Product";
-import products from "./Assets";
+import { products } from "./Assets";
 
 function FProduct() {
     return (

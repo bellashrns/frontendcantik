@@ -23,4 +23,8 @@ const products = [
     },
 ];
 
-export default products;
+const categories = [
+    "Fresh Flower", "Preserved & Dried Flowers", "Artificial Flowers", "Bloombox", "Flower Basket", "Vase Arrangement", "Money Bouquet", "Flower Board", "Standing Flower", "Frame"
+];
+
+export {products, categories};

@@ -4,6 +4,7 @@ import CCarousel from "./components/Carousel";
 import logo from "./assets/logo.jpg";
 import FProduct from "./components/FProduct";
 import { Outlet, Link } from "react-router-dom";
+import "./App.css";
 
 function Home() {
 
@@ -21,6 +22,13 @@ function Home() {
           flower installation and decoration for all events especially wedding.</p>
       </div>
       <FProduct />
+      </div>
+      <div className="text-center pb-4">
+        <button
+          className="btnSee p-2"
+        >
+          SEE ALL
+        </button>
       </div>
       <Footer />
       <Outlet />
