@@ -6,7 +6,7 @@ import { Catalogue } from "../../data/dashboard/Catalogue";
 import ButtonLight from "./ButtonLight";
 import "../../App.css";
 
-function CatalogListBox() {
+function Items() {
   const { id } = useParams();
   const data = Transaction[id-1];
   const catalog = Catalogue;
@@ -50,4 +50,4 @@ function CatalogListBox() {
   );
 }
 
-export default CatalogListBox;
+export default Items;
