@@ -9,51 +9,61 @@ import * as AiIcons from "react-icons/ai";
 import logo from "../assets/logo.jpg";
 
 function Heading() {
-    const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
 
-    const showSidebar = () => setSidebar(!sidebar);
+  const showSidebar = () => setSidebar(!sidebar);
 
-    return <div className="row border-bottom">
+  return (
+    <IconContext.Provider value={{ color: "undefined" }}>
+      <div className="row border-bottom">
         <div className="col-3 p-5 mt-2">
-        <IconContext.Provider value={{ color: "undefined" }}>
-      <div className="navbarWeb">
-          <Link to="#" className="menuWeb-bars-closed">
-            <FaIcons.FaBars onClick={showSidebar} />
-          </Link>
-        </div>
-        <nav className={sidebar ? "navWeb-menu active" : "navWeb-menu"}>
-          <ul className="navWeb-menu-items" onClick={showSidebar}>
-          <li className="navbarWeb-toggle">
-              <Link to="#" className="menuWeb-bars">
-                <AiIcons.AiOutlineClose />
-              </Link>
-            </li>
-            <li className="navbarWeb-toggle px-5 mt-3">
-              
-            </li>
-            {SidebarDataWeb.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path}>
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </IconContext.Provider>
+          <div className="navbarWeb">
+            <a
+              className="menuWeb-bars-closed"
+              href="#"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasExample"
+              aria-controls="offcanvasExample"
+            >
+              <FaIcons.FaBars onClick={showSidebar} />
+            </a>
+          </div>
+
+          <div
+            class="offcanvas offcanvas-start navWeb-menu"
+            tabindex="-1"
+            id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel"
+          >
+            <div class="offcanvas-body">
+              <ul className="nav-menu-items" onClick={showSidebar}>
+                <li className="navbar-toggle"></li>
+                <li className="navbar-toggle px-4"></li>
+                {SidebarDataWeb.map((item, index) => {
+                  return (
+                    <li key={index} className={item.cName}>
+                      <Link to={item.path}>
+                        {item.icon}
+                        <span>{item.title}</span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
         </div>
         <div className="col-6 d-flex justify-content-center">
-            <img src={logo} style={{width: 200}} />
+          <img src={logo} style={{ width: 200 }} />
         </div>
         <div className="col-3 d-flex justify-content-end p-5 mt-2">
-            <i class="fa-regular fa-user px-2"></i>
-            <i class="fa-solid fa-cart-shopping px-2"></i>
-            <i class="fa-solid fa-magnifying-glass px-2"></i>
+          <i class="fa-regular fa-user px-2"></i>
+          <i class="fa-solid fa-cart-shopping px-2"></i>
+          <i class="fa-solid fa-magnifying-glass px-2"></i>
         </div>
-    </div>;
+      </div>
+    </IconContext.Provider>
+  );
 }
 
 export default Heading;

@@ -242,10 +242,6 @@ span {
   display: flex;
   justify-content: center;
   position: fixed;
-  top: 0;
-  left: -100%;
-  transition: 850ms;
-  z-index: 289;
 }
 
 .navWeb-menu.active {
