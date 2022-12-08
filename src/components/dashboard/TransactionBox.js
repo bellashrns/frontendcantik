@@ -21,7 +21,7 @@ function CatalogListBox() {
                 <p class="card-text">{item.date}</p>
                 <p class="transactionStatus">{item.status}</p>
                 </div>
-                <div class="mt-4 pt-3 col-md-4 .offset-md-4">
+                <div class="mt-4 pt-3 col-3">
                 <Link to={"/dashboard/transaction/details/"+item.id}>
                   <ButtonLight 
                     name="Open Details"

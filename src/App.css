@@ -23,7 +23,21 @@
   color: #fff;
 }
 
+.menu-bars:hover {
+  margin-left: 1rem;
+  font-size: 2rem;
+  background: none;
+  color: #fff;
+}
+
 .menu-bars-closed {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+    color: #B66358;
+  }
+
+  .menu-bars-closed:hover {
     margin-left: 2rem;
     font-size: 2rem;
     background: none;
@@ -182,4 +196,103 @@ span {
 .btnSee:hover {
   background-color: #FB928E;
   border-color: transparent;
+}
+
+/* Navbar Website */
+.navbarWeb {
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menuWeb-bars {
+  margin-left: 1rem;
+  font-size: 2rem;
+  background: none;
+  color: #fff;
+}
+
+.menuWeb-bars:hover {
+  margin-left: 1rem;
+  font-size: 2rem;
+  background: none;
+  color: #fff;
+}
+
+.menuWeb-bars-closed {
+    margin-left: 2rem;
+    font-size: 20px;
+    background: none;
+    color: #B66358;
+  }
+
+  .menuWeb-bars-closed:hover {
+    margin-left: 2rem;
+    font-size: 20px;
+    background: none;
+    color: #B66358;
+  }
+
+.navWeb-menu {
+  background: rgb(182,99,88);
+  background: linear-gradient(180deg, rgba(182,99,88,1) 33%, rgba(230,184,173,1) 100%);
+  width: 320px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+  z-index: 289;
+}
+
+.navWeb-menu.active {
+  left: 0;
+  transition: 450ms;
+}
+
+.navWeb-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.navWeb-text a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.navWeb-text a:hover {
+  background-color: #fff;
+  color: #B66358;
+}
+
+.navWeb-menu-items {
+  width: 100%;
+}
+
+.navbarWeb-toggle {
+  background-color: transparent;
+  color: #fff;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+span {
+  margin-left: 16px;
 }
