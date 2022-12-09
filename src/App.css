@@ -346,3 +346,15 @@ span {
     background-color: rgb(194, 193, 193);
     box-shadow: 1px 2px rgb(167, 164, 164);
   }
+
+  ul {
+    list-style-type: none;
+  }
+
+.contactusfooter {
+  margin-right: 45px;
+}
+
+.contactus {
+  margin-left: 5px;
+}
