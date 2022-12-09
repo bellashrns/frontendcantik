@@ -10,8 +10,6 @@ import logo from "../assets/logo.jpg";
 import login from "../assets/login.png";
 import PopUpButton from "./popUpButton";
 import LoginPopUp from "./LoginPopUp";
-import shopee from "../assets/shopee.png";
-import tokped from "../assets/tokped.png";
 import close from "../assets/close.png";
 
 function Heading(props) {
@@ -74,6 +72,7 @@ function Heading(props) {
           <img src={logo} style={{ width: 200 }} />
           </div>
         <div className="col-3 d-flex justify-content-end p-5 mt-2">
+        <i class="fa-solid fa-user" onClick={togglePopup}></i>
             {/* <img src={login} style={{width: 14, height: 18, marginRight: 8}}/> */}
                {/* <PopUpButton pict={login} handleClick={togglePopup}/> */}
                {isOpen && <LoginPopUp closeButton={close} pict={login} handleClose={togglePopup} />}
