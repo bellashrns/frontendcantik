@@ -72,10 +72,10 @@ function Heading(props) {
           <img src={logo} style={{ width: 200 }} />
           </div>
         <div className="col-3 d-flex justify-content-end p-5 mt-2">
-        <i class="fa-solid fa-user" onClick={togglePopup}></i>
+        <i class="fa-solid fa-user px-2" onClick={togglePopup}></i>
             {/* <img src={login} style={{width: 14, height: 18, marginRight: 8}}/> */}
                {/* <PopUpButton pict={login} handleClick={togglePopup}/> */}
-               {isOpen && <LoginPopUp closeButton={close} pict={login} handleClose={togglePopup} />}
+               {isOpen && <LoginPopUp closeButton={close} handleClose={togglePopup} />}
           <i class="fa-solid fa-cart-shopping px-2"></i>
           <i class="fa-solid fa-magnifying-glass px-2"></i>
         </div>

@@ -10,7 +10,7 @@ function Footer() {
         <div className="col-3 p-4">
             <div className="addressfooter">
             <h5>Address</h5>
-            <p>Jl. Flamboyan utama 1 C2 no 9, Kosambi Baru, Cengkareng, Jakarta Barat 11750</p>
+            <p>Jl. Flamboyan Utama 1 C2 no 9, Kosambi Baru, Cengkareng, Jakarta Barat 11750</p>
         </div></div>
         <div className="col-6 d-flex justify-content-center">
             <img src={logo} style={{width: 200}} />
