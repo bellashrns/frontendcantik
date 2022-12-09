@@ -20,6 +20,7 @@ function ProductDetail(props) {
                 <div className="col">
                     <h1>{products[1].name}</h1>
                     <h4>{products[1].price}</h4>
+                    {/* <p>{products.desc}</p> */}
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <form>
                         <label>Message</label><br />

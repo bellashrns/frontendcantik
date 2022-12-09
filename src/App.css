@@ -178,7 +178,7 @@ span {
   transition: 0.3s;
 }
 
-.btnCat, .btnQuantity, .btnAdd, .btnAsk {
+.btnCat, .btnQuantity, .btnAdd, .btnAsk, .btnTrash {
   border-color: transparent;
   background-color: transparent;
 }

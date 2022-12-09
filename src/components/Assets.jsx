@@ -27,4 +27,19 @@ const categories = [
     "Fresh Flower", "Preserved & Dried Flowers", "Artificial Flowers", "Bloombox", "Flower Basket", "Vase Arrangement", "Money Bouquet", "Flower Board", "Standing Flower", "Frame"
 ];
 
-export {products, categories};
+const cart = [
+    {
+        id: 2,
+        quantity: 5
+    },
+    {
+        id: 1,
+        quantity: 2
+    },
+    {
+        id: 3,
+        quantity: 3
+    },
+];
+
+export {products, categories, cart};

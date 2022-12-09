@@ -14,6 +14,7 @@ import EditCatalog from "./EditCatalog";
 import CustomOrder from "./CustomOrder";
 import AboutUs from "./AboutUs";
 import ProductDetail from './ProductDetail';
+import ShoppingCart from './ShoppingCart';
 
 export default function App() {
   return (
@@ -42,6 +43,8 @@ export default function App() {
         <Route path="/catalog" element={<Catalog />}>
         </Route>
         <Route path="/productdetail" element={<ProductDetail />}>
+        </Route>
+        <Route path="/shoppingcart" element={<ShoppingCart />}>
         </Route>
         <Route path="/custom" element={<CustomOrder/>}>
         </Route>
