@@ -17,6 +17,7 @@ import ProductDetail from './ProductDetail';
 import ShoppingCart from './ShoppingCart';
 import Transaction from "./Transaction";
 import TransactionDetailPage from "./TransactionDetailPage";
+import Checkout from './Checkout';
 
 export default function App() {
   return (
@@ -47,6 +48,8 @@ export default function App() {
         <Route path="/productdetail" element={<ProductDetail />}>
         </Route>
         <Route path="/shoppingcart" element={<ShoppingCart />}>
+        </Route>
+        <Route path="/checkout" element={<Checkout />}>
         </Route>
         <Route path="/custom" element={<CustomOrder/>}>
         </Route>
