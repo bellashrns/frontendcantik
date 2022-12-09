@@ -1,0 +1,47 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { Transaction } from "../data/dashboard/Transaction";
+import ButtonLight from "./dashboard/ButtonLight";
+import "../App.css";
+
+function CatalogListBox() {
+  // Fetch User 
+  const userId = 1;
+  const myTransaction = Transaction.filter(item => item.userId === userId);
+
+  return (
+    <>
+      <div className="row-auto">
+        {myTransaction.map((item, index) => {
+          return (
+            <div className="col">
+            <div  class="card mt-3">
+              <div class="card-body text-left">
+                <div class="row w-100">
+                  <div class="col">
+                <h5 class="card-title pt-2">
+                  <b>{item.invoiceNumber}</b> (Rp {item.total})
+                </h5>
+                <p class="card-text">{item.date}</p>
+                <p class="transactionStatus">{item.status}</p>
+                </div>
+                <div class="mt-4 pt-3 col-3">
+                <Link to={"/transaction/details/"+item.id}>
+                  <ButtonLight 
+                    name="Open Details"
+                    type="Button"
+                  />
+                </Link>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+}
+
+export default CatalogListBox;

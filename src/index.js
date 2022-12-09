@@ -15,6 +15,8 @@ import CustomOrder from "./CustomOrder";
 import AboutUs from "./AboutUs";
 import ProductDetail from './ProductDetail';
 import ShoppingCart from './ShoppingCart';
+import Transaction from "./Transaction";
+import TransactionDetailPage from "./TransactionDetailPage";
 
 export default function App() {
   return (
@@ -49,6 +51,10 @@ export default function App() {
         <Route path="/custom" element={<CustomOrder/>}>
         </Route>
         <Route path="/about" element={<AboutUs/>}>
+        </Route>
+        <Route path="/transaction" element={<Transaction/>}>
+        </Route>
+        <Route path="/transaction/details/:id" element={<TransactionDetailPage/>}>
         </Route>
       </Routes>
     </BrowserRouter>

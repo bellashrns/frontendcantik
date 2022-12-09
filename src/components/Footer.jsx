@@ -16,11 +16,19 @@ function Footer() {
         </div>
         <div className="col-3 p-4">
             <h5>Contact Us</h5>
+            <a href="https://www.instagram.com/feodora.florist/" target="_blank">
             <img src={instagram} style={{width: 20, marginTop: -6, marginLeft: 7}} />
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=62895345960340&text&type=phone_number&app_absent=0" target="_blank">
             <img src={whatsapp} style={{width: 23, marginTop: -5, marginLeft: 5}} />
+            </a>
+            <a href="https://www.tokopedia.com/feodoraflorist" target="_blank">
             <img src={tokped} style={{width: 20, marginTop: -6, marginLeft: 7}} />
+            </a>
+            <a href="https://shopee.co.id/shop/39260709?utm_source=an_11358680000&utm_medium=affiliates&utm_campaign=-&utm_content=39260709----&utm_term=8fbccranrk6k" target="_blank">
             <img src={shopee} style={{width: 23, marginTop: -5, marginLeft: 5}} />
-        </div>
+            </a>
+            </div>
     </div>;
 }
 
