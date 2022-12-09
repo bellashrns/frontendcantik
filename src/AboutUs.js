@@ -31,7 +31,7 @@ and decoration for all events especially wedding. </p>
                 <li class="list-inline-item">Instagram</li>
                 </ul>
                 </a>
-                <a href="https://wa.me/6281586196863" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/62895345960340" target="_blank" rel="noopener noreferrer">
                 <ul class="list-inline">
                 <li class="list-inline-item"><img src={whatsapp} style={{width: 20, marginTop: -6, marginLeft: 7}}></img></li>
                 <li class="list-inline-item">Whatsapp</li>
