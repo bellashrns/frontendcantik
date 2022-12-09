@@ -178,14 +178,18 @@ span {
   transition: 0.3s;
 }
 
-.btnCat {
-  border-radius: 50px;
+.btnCat, .btnQuantity, .btnAdd, .btnAsk {
+  border-color: transparent;
   background-color: transparent;
+}
+
+.btnCat:hover, .btnSee:hover, .btnAdd:hover, .btnAsk:hover {
+  background-color: #FB928E;
   border-color: transparent;
 }
 
-.btnCat:hover {
-  background-color: #FB928E;
+.btnCat {
+  border-radius: 50px;
 }
 
 .btnSee {
@@ -193,9 +197,8 @@ span {
   background-color: transparent;
 }
 
-.btnSee:hover {
-  background-color: #FB928E;
-  border-color: transparent;
+.btnAdd, .btnAsk {
+  border-radius: 20px;
 }
 
 /* Navbar Website */

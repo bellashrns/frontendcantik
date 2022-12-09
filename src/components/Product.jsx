@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Product(props) {
     return (
         <div className="col-auto">
-            <Link to="/">
+            <Link to="/productdetail">
                 <img src={props.src} />
             </Link>
             <h5>{props.name}</h5>

@@ -13,6 +13,7 @@ import DetailPageTransaction from "./DetailPageTransaction";
 import EditCatalog from "./EditCatalog";
 import CustomOrder from "./CustomOrder";
 import AboutUs from "./AboutUs";
+import ProductDetail from './ProductDetail';
 
 export default function App() {
   return (
@@ -39,6 +40,8 @@ export default function App() {
         <Route path="/dashboard/transaction/details/:id" element={<DetailPageTransaction />}>
         </Route>
         <Route path="/catalog" element={<Catalog />}>
+        </Route>
+        <Route path="/productdetail" element={<ProductDetail />}>
         </Route>
         <Route path="/custom" element={<CustomOrder/>}>
         </Route>

@@ -39,11 +39,11 @@ function Home(props) {
       <FProduct />
       </div>
       <div className="text-center pb-4">
-        <button
+        <Link to="/catalog"><button
           className="btnSee p-2"
         >
           SEE ALL
-        </button>
+        </button></Link>
       </div>
       <Footer />
       <Outlet />

@@ -75,7 +75,7 @@ function Heading(props) {
           </div>
         <div className="col-3 d-flex justify-content-end p-5 mt-2">
             {/* <img src={login} style={{width: 14, height: 18, marginRight: 8}}/> */}
-               <PopUpButton pict={login} handleClick={togglePopup}/>
+               {/* <PopUpButton pict={login} handleClick={togglePopup}/> */}
                {isOpen && <LoginPopUp closeButton={close} pict={login} handleClose={togglePopup} />}
           <i class="fa-solid fa-cart-shopping px-2"></i>
           <i class="fa-solid fa-magnifying-glass px-2"></i>
