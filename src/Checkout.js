@@ -57,7 +57,7 @@ function Checkout() {
                     <input type="text" className="form-control" id="zipCode" />
                 </FormGroup>
             </div>
-            <FormGroup>
+            <FormGroup className="mt-2">
                 <FormLabel>Additional Information</FormLabel>
                 <input type="text" className="form-control" id="additionalInfo" />
             </FormGroup>
@@ -71,7 +71,7 @@ function Checkout() {
                     <input type="file" className="form-control" id="buktiTF" />
                 </FormGroup>
             </div>
-            <button type="submit" className="btn btn-primary mt-2">Submit</button>
+            <button type="submit" className="dashButtonLight mt-2">Submit</button>
         </Form>
       </div>
       <Footer />

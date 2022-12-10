@@ -40,7 +40,7 @@ function Home(props) {
       </div>
       <div className="text-center pb-4">
         <Link to="/catalog"><button
-          className="btnSee p-2"
+          className="dashButtonLight p-2"
         >
           SEE ALL
         </button></Link>

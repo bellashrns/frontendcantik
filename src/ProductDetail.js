@@ -27,20 +27,20 @@ function ProductDetail(props) {
                         <input type="text" />
                     </form><br />
                     <p>Quantity</p>
-                    <div style={{marginTop: -10}} className="row">
+                    <div style={{marginTop: -10, marginLeft: -4}} className="row">
                         <button
                             onClick={() => setQuantity(quantity + 1)} 
-                            className="btnQuantity col-1"
+                            className="dashButtonLight col-1 p-1"
                         ><i class="fa-solid fa-plus"></i></button>
-                        <h5 className="col-1 text-center ms-sm-2 ms-lg-0">{quantity}</h5>
+                        <h5 className="col-1 text-center mt-2 me-sm-1">{quantity}</h5>
                         <button 
                             onClick={quantity > 1 ? () => setQuantity(quantity - 1) : undefined} 
-                            className="btnQuantity col-1"
+                            className="dashButtonLight col-1 p-1"
                         ><i class="fa-solid fa-minus"></i></button>
                     </div>
                     <div className="row pt-3">
-                        <button className="btnAdd col-3 m-2">Add To Cart</button>
-                        <button className="btnAsk col-3 m-2">Ask Us</button>
+                        <button className="dashButtonLight col-lg-3 m-2">Add To Cart</button>
+                        <button className="dashButtonLight col-lg-3 m-2">Ask Us</button>
                     </div>
                 </div>
             </div>

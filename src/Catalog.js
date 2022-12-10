@@ -5,8 +5,10 @@ import Product from "./components/Product";
 import { products, categories } from "./components/Assets";
 import Collapse from "react-bootstrap/Collapse";
 import "./App.css";
+import { useParams } from 'react-router';
 
 function Catalog() {
+  const { id } = useParams();
   const [open, setOpen] = useState(false);
 
   return (
@@ -47,10 +49,10 @@ function Catalog() {
       </Collapse>
       <div className="text-center pb-4">
         <button
-          onClick={() => setOpen(!open)}
+          onClick={() => setOpen(!open)} 
           aria-controls="example-collapse-text"
           aria-expanded={open}
-          className="btnSee p-2"
+          className="dashButtonLight p-2"
         >
           SEE ALL
         </button>
