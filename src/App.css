@@ -362,3 +362,19 @@ span {
 .addressfooter {
   margin-left: 45px;
 }
+
+.regist-btn {
+  background-color: lightgray;
+  height: 40px;
+  width: 95px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 1px 2px rgb(194, 193, 193);
+}
+  .regist-btn:hover {
+    background-color: rgb(194, 193, 193);
+    box-shadow: 1px 2px rgb(167, 164, 164);
+  }

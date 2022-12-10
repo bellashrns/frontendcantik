@@ -18,6 +18,7 @@ import ShoppingCart from './ShoppingCart';
 import Transaction from "./Transaction";
 import TransactionDetailPage from "./TransactionDetailPage";
 import Checkout from './Checkout';
+import Register from "./Register";
 
 export default function App() {
   return (
@@ -58,6 +59,8 @@ export default function App() {
         <Route path="/transaction" element={<Transaction/>}>
         </Route>
         <Route path="/transaction/details/:id" element={<TransactionDetailPage/>}>
+        </Route>
+        <Route path="/register" element={<Register/>}>
         </Route>
       </Routes>
     </BrowserRouter>

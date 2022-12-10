@@ -17,7 +17,12 @@ const LoginPopUp = props => {
             <br/><br/>
             <input type="submit" value="LOGIN" className="login-btn" />
           </form>
+          <br/>
+          <center className="registerlink">
+          <a href="/register">Or register here</a>
+          </center>
         </div>
+        
         </div>
     );
 }
