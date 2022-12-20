@@ -19,7 +19,7 @@ function Dashboard() {
 
       
       // post data to http://188.166.209.207:8000/api/categories/create
-      const response2 = await fetch("http://188.166.209.207:8000/api/categories/create", {
+      const response2 = await fetch("https://feodoraflo.itshiroto.me/laravel/api/categoriescreate", {
         method: "POST",
         credentials: "include",
         mode: "same-origin",
