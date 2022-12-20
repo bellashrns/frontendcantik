@@ -1,8 +1,11 @@
+
 import React, { useState } from "react";
 import Sidebar from "./components/dashboard/Header";
 import CategoryBox from "./components/dashboard/CategoryBox";
 import ButtonLight from "./components/dashboard/ButtonLight";
 import { Link } from "react-router-dom";
+
+
 import "./App.css";
 
 function Dashboard() {
@@ -12,20 +15,26 @@ function Dashboard() {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await fetch("http://188.166.209.207:8000/api/categories/create", 
-      {
+      // get csrf token from local storage
+
+      
+      // post data to http://188.166.209.207:8000/api/categories/create
+      const response2 = await fetch("http://188.166.209.207:8000/api/categories/create", {
         method: "POST",
+        credentials: "include",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
-          'name': addCat
+          name: addCat,
         }),
       });
-      let resJson = await res.json();
-      if (res.status === 200) {
-        setAddCat("");
-        setMessage("User created successfully");
-      } else {
-        setMessage("Some error occured");
-      }
+      const data = await response2.json();
+      console.log(data);
+
+
+
     } catch (err) {
       console.log(err);
     }

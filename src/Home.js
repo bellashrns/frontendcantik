@@ -23,6 +23,42 @@ function Home(props) {
     //     setIsOpenLoginPopUp(!isOpenLoginPopUp);
     // }
 
+    // set csrf token to local storage
+    useEffect(() => {
+        const getCsrfToken = async () => {
+            try {
+              
+              // headers contentType: 'application/json',
+              
+              var header = new Headers();
+              header.append("Content-Type", "application/json");
+              header.append("Access-Control-Allow-Origin", "true");
+              header.append("Access-Control-Allow-Credentials", "true");
+
+              var requestOptions = {
+                method: 'GET',
+                headers: header,
+                redirect: 'follow',
+                credentials: "include",
+                
+              };
+              // fetch csrf token and save set-cookie to local storage
+              fetch("https://uasapi.itshiroto.me/sanctum/csrf-cookie", requestOptions)
+                .then(response => {
+                  // set csrf token to local storage
+                  // localStorage.setItem("csrfToken", response.headers.get("set-cookie"));
+                  console.log(response.headers.get("Set-Cookie"));
+                })
+
+                
+            } catch (err) {
+              console.log(err);
+            }
+
+        };
+        getCsrfToken();
+    }, []);
+
   return (
     <div className="Home">
       <Heading />

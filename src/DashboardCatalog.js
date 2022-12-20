@@ -2,6 +2,7 @@ import Sidebar from "./components/dashboard/Header";
 import CatalogListBox from "./components/dashboard/CatalogListBox";
 import ButtonLight from "./components/dashboard/ButtonLight";
 import { Link } from "react-router-dom";
+
 import "./App.css";
 
 function Dashboard() {
