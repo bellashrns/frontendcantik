@@ -15,10 +15,6 @@ function Dashboard() {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // get csrf token from local storage
-
-      
-      // post data to http://188.166.209.207:8000/api/categories/create
       const response2 = await fetch("https://feodoraflo.itshiroto.me/laravel/api/categoriescreate", {
         method: "POST",
         credentials: "include",
@@ -32,6 +28,12 @@ function Dashboard() {
       });
       const data = await response2.json();
       console.log(data);
+
+      if (data.status === "success") {
+        setMessage("Category added successfully");
+      } else {
+        setMessage("Category already exists");
+      }
 
 
 
