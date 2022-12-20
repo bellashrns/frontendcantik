@@ -29,14 +29,6 @@ function Dashboard() {
       const data = await response2.json();
       console.log(data);
 
-      if (data.status === "success") {
-        setMessage("Category added successfully");
-      } else {
-        setMessage("Category already exists");
-      }
-
-
-
     } catch (err) {
       console.log(err);
     }
