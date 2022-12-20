@@ -32,15 +32,13 @@ function Home(props) {
               
               var header = new Headers();
               header.append("Content-Type", "application/json");
-              header.append("Access-Control-Allow-Origin", "true");
-              header.append("Access-Control-Allow-Credentials", "true");
+
 
               var requestOptions = {
                 method: 'GET',
                 headers: header,
                 redirect: 'follow',
                 credentials: "include",
-                mode: "cors"
                 
               };
               // fetch csrf token and save set-cookie to local storage
