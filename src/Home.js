@@ -42,10 +42,10 @@ function Home(props) {
                 
               };
               // fetch csrf token and save set-cookie to local storage
-              fetch("http://127.0.0.1/sanctum/csrf-cookie", requestOptions)
+              fetch("https://feodoraflo.itshiroto.me/laravel/sanctum/csrf-cookie", requestOptions)
                 .then(response => {
                   // set csrf token to local storage
-                  // localStorage.setItem("csrfToken", response.headers.get("set-cookie"));
+                  // localStorage.setItem("csrfToken", response.headers.get("set-cookie")); 
                   console.log(response.headers.get("Set-Cookie"));
                 })
 
