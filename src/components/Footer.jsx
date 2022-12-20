@@ -13,7 +13,7 @@ function Footer() {
             <p>Jl. Flamboyan Utama 1 C2 no 9, Kosambi Baru, Cengkareng, Jakarta Barat 11750</p>
         </div></div>
         <div className="col-6 d-flex justify-content-center">
-            <img src={logo} style={{width: 200}} />
+            <img src={logo} style={{width: 200}} id="footer-logo" />
         </div>
         <div className="col-3 p-4 d-flex justify-content-end">
             <div className="contactusfooter">
