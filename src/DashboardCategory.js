@@ -22,7 +22,7 @@ function Dashboard() {
       const response2 = await fetch("http://188.166.209.207:8000/api/categories/create", {
         method: "POST",
         credentials: "include",
-        mode: "no-cors",
+        mode: "same-origin",
         headers: {
           "Content-Type": "application/json",
         },

@@ -40,6 +40,7 @@ function Home(props) {
                 headers: header,
                 redirect: 'follow',
                 credentials: "include",
+                mode: "same-origin"
                 
               };
               // fetch csrf token and save set-cookie to local storage
