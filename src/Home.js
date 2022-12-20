@@ -44,7 +44,7 @@ function Home(props) {
                 
               };
               // fetch csrf token and save set-cookie to local storage
-              fetch("https://uasapi.itshiroto.me/sanctum/csrf-cookie", requestOptions)
+              fetch("http://localhost:8000/sanctum/csrf-cookie", requestOptions)
                 .then(response => {
                   // set csrf token to local storage
                   // localStorage.setItem("csrfToken", response.headers.get("set-cookie"));
