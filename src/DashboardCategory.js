@@ -16,7 +16,7 @@ function Dashboard() {
       {
         method: "POST",
         body: JSON.stringify({
-          addCat: addCat
+          'name': addCat
         }),
       });
       let resJson = await res.json();
