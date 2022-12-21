@@ -29,7 +29,15 @@ const LoginPopUp = props => {
                 .then((response) => response.json())
                 .then((data) => {
                     console.log(data);
-                    // if login is successful, redirect to dashboard
+                    // if login is successful, redirect to home
+                    if (data.status === "success") {
+                        window.location.href = "/";
+                    }
+                    // if login is not successful, show error message
+                    else {
+                        alert("Login failed");
+                    }
+
                 }
                 );
         }
