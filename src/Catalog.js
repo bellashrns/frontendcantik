@@ -6,7 +6,7 @@ import { products, categories } from "./components/Assets";
 import Collapse from "react-bootstrap/Collapse";
 import "./App.css";
 import { useParams } from 'react-router';
-import { useEffect, useState} from "react";
+import { useEffect} from "react";
 
 function Catalog() {
   const { id } = useParams();
@@ -50,7 +50,7 @@ function Catalog() {
           .then(response => response.json())
           .then(result => setProducts(result))
           .catch(error => console.log('error', error));
-          
+
       } catch (err) {
         console.log(err);
       }
