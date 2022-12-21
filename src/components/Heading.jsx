@@ -77,8 +77,9 @@ function Heading(props) {
             {/* <img src={login} style={{width: 14, height: 18, marginRight: 8}}/> */}
                {/* <PopUpButton pict={login} handleClick={togglePopup}/> */}
                {isOpen && <LoginPopUp closeButton={close} handleClose={togglePopup} />}
+          <Link to="/shoppingcart">
           <i class="fa-solid fa-cart-shopping px-2"></i>
-          <i class="fa-solid fa-magnifying-glass px-2"></i>
+          </Link>
         </div>
       </div>
     </IconContext.Provider>

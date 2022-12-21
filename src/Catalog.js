@@ -6,25 +6,84 @@ import { products, categories } from "./components/Assets";
 import Collapse from "react-bootstrap/Collapse";
 import "./App.css";
 import { useParams } from 'react-router';
+import { useEffect } from "react";
 
 function Catalog() {
   const { id } = useParams();
   const [open, setOpen] = useState(false);
 
+  // get all categories
+  useEffect(() => {
+    const getCategories = async () => {
+      try {
+        var requestOptions = {
+          method: 'GET',
+          redirect: 'follow',
+          credentials: "include",
+        };
+        fetch("https://feodoraflo.itshiroto.me/laravel/api/categories", requestOptions)
+          .then(response => response.json())
+          .then(result => console.log(result))
+          .catch(error => console.log('error', error));
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getCategories();
+  }, []);
+
+  // get all products
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        var requestOptions = {
+          method: 'GET',
+          redirect: 'follow',
+          credentials: "include",
+        };
+        fetch("https://feodoraflo.itshiroto.me/laravel/api/products", requestOptions)
+          .then(response => response.json())
+          .then(result => console.log(result))
+          .catch(error => console.log('error', error));
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getProducts();
+  }, []);
+  
+
   return (
     <div>
       <Heading />
       <div className="pt-3 col-6 mx-auto text-center">
+      {/* get all categories and map them, onclick get products by category */}
+
         {categories.map((e) => (
+          <button
+            className="btnCat p-1 pt-2 mx-2"
+            onClick={() => setOpen(!open)}
+          >
+            <h5>{e}</h5>
+          </button>
+        ))}
+
+        {/* {categories.map((e) => (
             <button
               className="btnCat p-1 pt-2 mx-2"
             >
               <h5>{e}</h5>
             </button>
-        ))}
+        ))} */}
       </div>
       <div className="row justify-content-center pt-3">
+      {/* map all product */}
         {products.map((e) => (
+          <Product src={e.src} name={e.name} price={e.price} />
+        ))}
+        
+
+        {/* {products.map((e) => (
           <Product src={e.src} name={e.name} price={e.price} />
         ))}
         {products.map((e) => (
@@ -32,7 +91,7 @@ function Catalog() {
         ))}
         {products.map((e) => (
           <Product src={e.src} name={e.name} price={e.price} />
-        ))}
+        ))} */}
       </div>
       <Collapse in={open}>
         <div className="row justify-content-center pt-3">
