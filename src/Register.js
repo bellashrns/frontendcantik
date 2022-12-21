@@ -81,7 +81,7 @@ function Register () {
         <div class="container">
             <br/>
         <h2 class="text-center">REGISTER</h2>
-        <form className="form" onSubmit={navigateToHome}>
+        <form className="form" onSubmit={register}>
             <label>Nama Lengkap</label>
             <br/>
             <input type="text" name="namalengkap" className="regist-box" onChange={(e) => setNamaLengkap(e.target.value)} />
