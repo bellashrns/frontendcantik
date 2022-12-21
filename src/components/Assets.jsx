@@ -6,20 +6,20 @@ const products = [
     {
         id: 1,
         src: test1,
-        price: 10000,
-        name: 'test1'
+        price: 850000,
+        name: 'Big Bucket with 2 Tone Color'
     },
     {
         id: 2,
         src: test2,
-        price: 20000,
-        name: 'test2'
+        price: 450000,
+        name: 'Medium Bouquet'
     },
     {
         id: 3,
         src: test3,
-        price: 30000,
-        name: 'test3'
+        price: 300000,
+        name: '6 Flowers with Mini Doll'
     },
 ];
 

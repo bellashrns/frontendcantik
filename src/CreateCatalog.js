@@ -60,7 +60,7 @@ function CreateCatalog() {
       </div>
       <div className="col pt-3 px-5">
         <h1>Create Catalog</h1>
-        <form class="w-50">
+        <form class="w-50" onSubmit={handleSubmit}>
           <div class="form-group">
             <label for="inputItemName">Item Name</label>
             <input
