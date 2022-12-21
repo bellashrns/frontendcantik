@@ -2,7 +2,7 @@ import Heading from "./components/Heading";
 import Footer from "./components/Footer";
 import "./App.css";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 function Register () {
     const navigate = useNavigate();
