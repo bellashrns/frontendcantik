@@ -6,13 +6,17 @@ import { products, categories } from "./components/Assets";
 import Collapse from "react-bootstrap/Collapse";
 import "./App.css";
 import { useParams } from 'react-router';
-import { useEffect } from "react";
+import { useEffect, useState} from "react";
 
 function Catalog() {
   const { id } = useParams();
   const [open, setOpen] = useState(false);
 
   // get all categories
+  const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState([]);
+
+
   useEffect(() => {
     const getCategories = async () => {
       try {
@@ -23,8 +27,9 @@ function Catalog() {
         };
         fetch("https://feodoraflo.itshiroto.me/laravel/api/categories", requestOptions)
           .then(response => response.json())
-          .then(result => console.log(result))
+          .then(result => setCategories(result))
           .catch(error => console.log('error', error));
+
       } catch (err) {
         console.log(err);
       }
@@ -43,8 +48,9 @@ function Catalog() {
         };
         fetch("https://feodoraflo.itshiroto.me/laravel/api/products", requestOptions)
           .then(response => response.json())
-          .then(result => console.log(result))
+          .then(result => setProducts(result))
           .catch(error => console.log('error', error));
+          
       } catch (err) {
         console.log(err);
       }
@@ -81,7 +87,7 @@ function Catalog() {
         {products.map((e) => (
           <Product src={e.src} name={e.name} price={e.price} />
         ))}
-        
+
 
         {/* {products.map((e) => (
           <Product src={e.src} name={e.name} price={e.price} />
