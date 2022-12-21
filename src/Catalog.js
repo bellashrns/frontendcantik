@@ -68,7 +68,6 @@ function Catalog() {
         {categories.map((e) => (
           <button
             className="btnCat p-1 pt-2 mx-2"
-            onClick={() => setOpen(!open)}
           >
             <h5>{e}</h5>
           </button>
