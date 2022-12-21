@@ -13,7 +13,7 @@ const products = [
         id: 2,
         src: test2,
         price: 450000,
-        name: 'Medium Bouquet'
+        name: 'Medium Bouquet with 2 Color'
     },
     {
         id: 3,
