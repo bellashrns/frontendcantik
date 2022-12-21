@@ -22,28 +22,9 @@ function Register () {
     const register = async () => {
       try {
         // set csrf token to local storage
-        useEffect(() => {
-            const getCsrfToken = async () => {
-                try {
-                  var header = new Headers();
-
-                  var requestOptions = {
-                    method: 'GET',
-                    headers: header,
-                    redirect: 'follow',
-                    credentials: "include",
-                  };
-                  // fetch csrf token and save set-cookie to local storage
-                  fetch("https://feodoraflo.itshiroto.me/laravel/sanctum/csrf-cookie", requestOptions)
-                    .then(response => response.text())
-                    .then(result => console.log(result))
-                    .catch(error => console.log('error', error));
-                } catch (err) {
-                  console.log(err);
-                }
-            };
-            getCsrfToken();
-        }, []);
+        const response = await fetch("https://feodoraflo.itshiroto.me/laravel/api/csrf-cookie");
+        const data = await response.json();
+        console.log(data);
 
         // register
         var myHeaders = new Headers();
