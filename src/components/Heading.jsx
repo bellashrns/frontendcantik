@@ -11,6 +11,7 @@ import login from "../assets/login.png";
 import PopUpButton from "./popUpButton";
 import LoginPopUp from "./LoginPopUp";
 import close from "../assets/close.png";
+// import { useState, useEffects } from "react";
 
 function Heading(props) {
   const [sidebar, setSidebar] = useState(false);
