@@ -69,7 +69,7 @@ function Catalog() {
           <button
             className="btnCat p-1 pt-2 mx-2"
           >
-            <h5>{e}</h5>
+            <h5>{e.name}</h5>
           </button>
         ))}
 

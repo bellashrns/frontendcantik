@@ -3,7 +3,6 @@ import Heading from "./components/Heading";
 import Footer from "./components/Footer";
 import "./App.css";
 import Checkbox from "./components/Checkbox";
-import { cart, products } from "./components/Assets";
 
 function ShoppingCart() {
     const [checkedAll, setCheckedAll] = useState(false);
@@ -58,6 +57,30 @@ function ShoppingCart() {
         setCheckedState(checkedState.map((item) => value));
     };
 
+    // get shopping cart
+    const [cart, setCart] = useState([]);
+    useEffect(() => {
+        const getCart = async () => {
+            try {
+                var requestOptions = {
+                    method: 'GET',
+                    redirect: 'follow',
+                    credentials: "include",
+                };
+                fetch("https://feodoraflo.itshiroto.me/laravel/api/cart", requestOptions)
+                    .then(response => response.json())
+                    .then(result => setCart(result))
+                    .catch(error => console.log('error', error));
+
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        getCart();
+    }, []);
+
+
+
     return (
         <div>
             <Heading />
@@ -69,7 +92,8 @@ function ShoppingCart() {
                         <label>Select All</label>
                     </div>
                     <div>
-                        {cart.map((item, index) => (   
+                        {/* map all cart items */}
+                        {cart.map((item, index) => (
                             <div className="border-bottom">
                                 <Checkbox
                                     label={products[item.id-1].name}
@@ -79,6 +103,7 @@ function ShoppingCart() {
                                     checked={checkedState[index]}
                                     onChange={() => handleChange(index)}
                                 />
+                                
                             </div>
                         ))}
                     </div>
