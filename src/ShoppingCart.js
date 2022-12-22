@@ -13,35 +13,59 @@ function ShoppingCart() {
     const [totalItems, setTotalItems] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
 
-    useEffect(() => {
-        let allChecked = true;
-        checkedState.forEach((item) => {
-            if (item === false) {
-                allChecked = false;
-            }
-        });
+    
 
-        setCheckedAll(allChecked);
+    // // get shopping cart
+    // const [cart, setCart] = useState([]);
+    // useEffect(() => {
+    //     const getCart = async () => {
+    //         try {
+    //             var requestOptions = {
+    //                 method: 'GET',
+    //                 redirect: 'follow',
+    //                 credentials: "include",
+    //             };
+    //             fetch("https://feodoraflo.itshiroto.me/laravel/api/cart", requestOptions)
+    //                 .then(response => response.json())
+    //                 .then(result => setCart(result))
+    //                 .catch(error => console.log('error', error));
 
-        const totalitem = checkedState.reduce((sum, currentState, index) => {
-            if (currentState === true) {
-                return sum + cart[index].quantity;
-            } else {
-                return sum;
-            }
-        }, 0);
+    //         } catch (err) {
+    //             console.log(err);
+    //         }
+    //     };
+    //     getCart();
+    // }, []);
 
-        const totalprice = checkedState.reduce((sum, currentState, index) => {
-            if (currentState === true) {
-                return sum + products[cart[index].id-1].price * cart[index].quantity;
-            } else {
-                return sum;
-            }
-        }, 0);
+    // useEffect(() => {
+    //     let allChecked = true;
+    //     checkedState.forEach((item) => {
+    //         if (item === false) {
+    //             allChecked = false;
+    //         }
+    //     });
 
-        setTotalItems(totalitem);
-        setTotalPrice(totalprice);
-    }, [checkedState]);
+    //     setCheckedAll(allChecked);
+
+    //     const totalitem = checkedState.reduce((sum, currentState, index) => {
+    //         if (currentState === true) {
+    //             return sum + cart[index].quantity;
+    //         } else {
+    //             return sum;
+    //         }
+    //     }, 0);
+
+    //     const totalprice = checkedState.reduce((sum, currentState, index) => {
+    //         if (currentState === true) {
+    //             return sum + products[cart[index].id-1].price * cart[index].quantity;
+    //         } else {
+    //             return sum;
+    //         }
+    //     }, 0);
+
+    //     setTotalItems(totalitem);
+    //     setTotalPrice(totalprice);
+    // }, [checkedState]);
     
 
     const handleChange = (position) => {
@@ -57,29 +81,6 @@ function ShoppingCart() {
         setCheckedState(checkedState.map((item) => value));
     };
 
-    // get shopping cart
-    const [cart, setCart] = useState([]);
-    useEffect(() => {
-        const getCart = async () => {
-            try {
-                var requestOptions = {
-                    method: 'GET',
-                    redirect: 'follow',
-                    credentials: "include",
-                };
-                fetch("https://feodoraflo.itshiroto.me/laravel/api/cart", requestOptions)
-                    .then(response => response.json())
-                    .then(result => setCart(result))
-                    .catch(error => console.log('error', error));
-
-            } catch (err) {
-                console.log(err);
-            }
-        };
-        getCart();
-    }, []);
-
-
 
     return (
         <div>
@@ -93,19 +94,20 @@ function ShoppingCart() {
                     </div>
                     <div>
                         {/* map all cart items */}
-                        {cart.map((item, index) => (
-                            <div className="border-bottom">
-                                <Checkbox
+                        {/* {cart.map((item, index) => ( */}
+                            {/* <div className="border-bottom"> */}
+                                {/* <Checkbox
                                     label={products[item.id-1].name}
                                     src={products[item.id-1].src}
                                     quantity={item.quantity}
                                     totalPrice={products[item.id-1].price * item.quantity}
                                     checked={checkedState[index]}
                                     onChange={() => handleChange(index)}
-                                />
+                                /> */}
+                                {console.log(item)}
                                 
-                            </div>
-                        ))}
+                            {/* </div> */}
+                        {/* ))} */}
                     </div>
                 </div>
                 <div className="col-lg-4 col-sm-6 row">
