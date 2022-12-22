@@ -68,6 +68,25 @@ function Catalog() {
         {categories.map((e) => (
           <button
             className="btnCat p-1 pt-2 mx-2"
+            onClick={() => {
+              setOpen(!open);
+              const getProductsByCategory = async () => {
+                try {
+                  var requestOptions = {
+                    method: 'GET',
+                    redirect: 'follow',
+                    credentials: "include",
+                  };
+                  fetch("https://feodoraflo.itshiroto.me/laravel/api/products/category/" + e.id, requestOptions)
+                    .then(response => response.json())
+                    .then(result => setProducts(result))
+                    .catch(error => console.log('error', error));
+                } catch (err) {
+                  console.log(err);
+                }
+              };
+              getProductsByCategory();
+            }}
           >
             <h5>{e.name}</h5>
           </button>
