@@ -5,37 +5,39 @@ import "./App.css";
 import Checkbox from "./components/Checkbox";
 
 function ShoppingCart() {
-    const [checkedAll, setCheckedAll] = useState(false);
-    const [checkedState, setCheckedState] = useState(
-        new Array(cart.length).fill(false)
-    );
+    
 
     const [totalItems, setTotalItems] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
 
     
 
-    // // get shopping cart
-    // const [cart, setCart] = useState([]);
-    // useEffect(() => {
-    //     const getCart = async () => {
-    //         try {
-    //             var requestOptions = {
-    //                 method: 'GET',
-    //                 redirect: 'follow',
-    //                 credentials: "include",
-    //             };
-    //             fetch("https://feodoraflo.itshiroto.me/laravel/api/cart", requestOptions)
-    //                 .then(response => response.json())
-    //                 .then(result => setCart(result))
-    //                 .catch(error => console.log('error', error));
+    // get shopping cart
+    const [cart, setCart] = useState([]);
+    useEffect(() => {
+        const getCart = async () => {
+            try {
+                var requestOptions = {
+                    method: 'GET',
+                    redirect: 'follow',
+                    credentials: "include",
+                };
+                fetch("https://feodoraflo.itshiroto.me/laravel/api/cart", requestOptions)
+                    .then(response => response.json())
+                    .then(result => setCart(result))
+                    .catch(error => console.log('error', error));
 
-    //         } catch (err) {
-    //             console.log(err);
-    //         }
-    //     };
-    //     getCart();
-    // }, []);
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        getCart();
+    }, []);
+
+    const [checkedAll, setCheckedAll] = useState(false);
+    const [checkedState, setCheckedState] = useState(
+        new Array(cart.length).fill(false)
+    );
 
     // useEffect(() => {
     //     let allChecked = true;
@@ -104,7 +106,7 @@ function ShoppingCart() {
                                     checked={checkedState[index]}
                                     onChange={() => handleChange(index)}
                                 /> */}
-                                {console.log(item)}
+                                {console.log(cart)}
                                 
                             {/* </div> */}
                         {/* ))} */}
