@@ -30,7 +30,7 @@ function CreateCatalog() {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response2 = await fetch("https://feodoraflo.itshiroto.me/laravel/api/categories/create", {
+      const response2 = await fetch("https://feodoraflo.itshiroto.me/laravel/api/products/create", {
         method: "POST",
         credentials: "include",
         mode: "same-origin",
