@@ -19,6 +19,7 @@ import Transaction from "./Transaction";
 import TransactionDetailPage from "./TransactionDetailPage";
 import Checkout from './Checkout';
 import Register from "./Register";
+import Login from "./Login";
 
 export default function App() {
   return (
@@ -61,6 +62,8 @@ export default function App() {
         <Route path="/transaction/details/:id" element={<TransactionDetailPage/>}>
         </Route>
         <Route path="/register" element={<Register/>}>
+        </Route>
+        <Route path="/login" element={<Login/>}>
         </Route>
       </Routes>
     </BrowserRouter>

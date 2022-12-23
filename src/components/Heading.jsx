@@ -11,6 +11,7 @@ import login from "../assets/login.png";
 import PopUpButton from "./popUpButton";
 import LoginPopUp from "./LoginPopUp";
 import close from "../assets/close.png";
+import Login from "../Login";
 // import { useState, useEffects } from "react";
 
 function Heading(props) {
@@ -73,10 +74,13 @@ function Heading(props) {
           <img src={logo} style={{ width: 200 }} />
           </div>
         <div className="col-3 d-flex justify-content-end p-5 mt-2">
-        <i class="fa-solid fa-user px-2" onClick={togglePopup}></i>
+        <Link to="/login">
+        <i class="fa-solid fa-user px-2"></i>
+        </Link>
+        {/* <i class="fa-solid fa-user px-2" onClick={togglePopup}></i> */}
             {/* <img src={login} style={{width: 14, height: 18, marginRight: 8}}/> */}
                {/* <PopUpButton pict={login} handleClick={togglePopup}/> */}
-               {isOpen && <LoginPopUp closeButton={close} handleClose={togglePopup} />}
+               {/* {isOpen && <LoginPopUp closeButton={close} handleClose={togglePopup} />} */}
           <Link to="/shoppingcart">
           <i class="fa-solid fa-cart-shopping px-2"></i>
           </Link>
